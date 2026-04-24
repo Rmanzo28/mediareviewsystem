@@ -15,7 +15,7 @@ def main():
     # main loop
     while True:
         # asks the user what they want to do
-        userchoice = input("What Would You Like To Do? (Enter/View/Sort/Quit): ").lower().strip()
+        userchoice = input("What Would You Like To Do? (Enter/View/Filter/Quit): ").lower().strip()
         # match statement(python equivalent of switch) to map user response -> action
         match userchoice:
 
@@ -37,7 +37,7 @@ def main():
 
             case "sort":
                 #sort by userinput
-                sort_choice = input("Sort by (type/rating/status): ").lower().strip()
+                sort_choice = input("Filter by (type/rating/status): ").lower().strip()
                 value = input("Enter value to filter by: ")
                 results = helpers.filter(sort_choice, value)
                 # print the dictionary neatly
