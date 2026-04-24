@@ -24,7 +24,10 @@ def main():
 
             case "view":
                 lines = helpers.read_file()
-                print(lines)
+                if lines:
+                    print(lines)
+                if not lines:
+                    log.error("File Not Found/Created")
 
             case "sort":
                 sort_choice = input("Sort by (type/rating/status): ").lower().strip()
