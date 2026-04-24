@@ -5,7 +5,7 @@ This is a simple CLI designed for reviewing and viewing reviews of media,such as
 ## How To Run 
 - Git clone the repository 
 ```bash
-git clone --depth 1 https://github.com/Rmanzo28/mediareviewsystem.git && cd  /mediareviewsystem
+git clone --depth 1 https://github.com/Rmanzo28/mediareviewsystem.git && cd  mediareviewsystem
 ```
 - Run the code 
 ```bash
@@ -30,7 +30,7 @@ What Would You Like To Do? (Enter/View/Sort/Quit):
 
 
 
-### Packages Used
+## Packages Used
 - logging(for conditional printing)
 - json(for data storage and parsing)
 - pathlib(for system path resolution)

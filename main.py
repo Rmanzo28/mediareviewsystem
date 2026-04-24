@@ -7,7 +7,7 @@ import json
 
 #main function
 def main():
-    #start screen
+    # welcome screen
     print("=" * 40)
     print(" Welcome to the Media Review System ")
     print("Rate, review, and explore your favorite media!")
@@ -28,6 +28,7 @@ def main():
                         print("File Write Failed")
 
             case "view":
+                # handles viewing all entries
                 lines = helpers.read_file()
                 if lines:
                     print(lines)
@@ -39,7 +40,7 @@ def main():
                 sort_choice = input("Sort by (type/rating/status): ").lower().strip()
                 value = input("Enter value to filter by: ")
                 results = dict(helpers.filter(sort_choice, value))
-
+                # print the dictionary neatly
                 print(json.dumps(results, indent=4))
 
             case "quit":
@@ -50,7 +51,7 @@ def main():
             case _:
                 # if input is invalid handler
                 print("Invalid option")
-# prevents resurive calling of main() by ensuring caller is the main thread
+# prevents recursive calling of main() by ensuring caller is the main thread
 if __name__ == "__main__":
     main()
                         
