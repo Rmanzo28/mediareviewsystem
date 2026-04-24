@@ -37,7 +37,7 @@ def write_to_file(data):
         try:
             # create and write file
             with open(path_to_file, "w") as f:
-                f.write(json.dumps(data + "\n"))
+                f.write(json.dumps(data) + "\n")
 
         except OSError:
             print("Failure to create/write file")
