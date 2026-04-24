@@ -2,6 +2,6 @@
 2. I would implement a system to sort under and over for certain rating( eg all entries with ratings > 7) and I would add more edge case handling and better comments
 3. Yes, I utilized claude ai to assist me with debugging and some problem solving with the code(for example, it suggested I use json rather than just blind file writes for more organized reads and easier sorting)
 4.I would say the biggest design decision I made was using json instead of writing a plain python dictionary or blind file write
-5. adding the helper functions to a seperate file added extra complexity and compilcated debugging, however it did allow for a more clean main file, which was the goal
-6. the user input function lacks input validation, so the user could mispell , causing the filter to always exclude it and for it to never be included
+5. Adding the helper functions to a seperate file added extra complexity and compilcated debugging, however it did allow for a more clean main file, which was the goal
+6. The user input function lacks input validation, so the user could mispell , causing the filter to always exclude it and for it to never be included
 
