@@ -1,17 +1,18 @@
 # Media Review System
-This is a simple media review cli build in python, designed to be simple and fast
+This is a simple CLI designed for reviewing and viewing reviews of media,such as video games,TV shows,and more
+
+
 ## How To Run 
-- git clone the repository 
+- Git clone the repository 
 ```bash
 git clone --depth 1 https://github.com/Rmanzo28/mediareviewsystem.git && cd  /mediareviewsystem
 ```
-- run the code 
+- Run the code 
 ```bash
 python3 main.py
 ```
-- respond to the prompts
+- Respond to the prompts
 ```bash
-python3 main.py
 ========================================
  Welcome to the Media Review System 
 Rate, review, and explore your favorite media!
@@ -22,7 +23,7 @@ What Would You Like To Do? (Enter/View/Sort/Quit):
 ## Features
 - Data Persistence(Via File)
 - Filtering(Based Off Type/Rating/Status)
-- Conditional Logging
+- Conditional Logging For Cleaner Output
 - User Input With Null Checks
 
 
@@ -30,9 +31,13 @@ What Would You Like To Do? (Enter/View/Sort/Quit):
 
 
 ### Packages Used
--logging(for conditional printing)
--json(for data storage and parsing)
--pathlib(for system path resolution)
+- logging(for conditional printing)
+- json(for data storage and parsing)
+- pathlib(for system path resolution)
+
+## Requirements
+- Python 3.12+
+
 
 
 

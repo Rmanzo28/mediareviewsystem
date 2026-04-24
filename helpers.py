@@ -24,7 +24,7 @@ def write_to_file(data):
             # append to existing file
             with open(path_to_file, "a") as f:
                 f.write(json.dumps(data) + "\n")
-
+        # catch failures to write
         except OSError:
             print("Failure to write file")
             return False
@@ -98,7 +98,7 @@ def collect_entries():
         return None
 # filter/sort function
 def filter(datatype, datavalue):
-    # the dict thatmatches input to types
+    # the dict that matches input to types
     data_type_dict = {
         "rating": 1,
         "type": 2,
