@@ -39,7 +39,7 @@ def main():
                 #sort by userinput
                 sort_choice = input("Sort by (type/rating/status): ").lower().strip()
                 value = input("Enter value to filter by: ")
-                results = dict(helpers.filter(sort_choice, value))
+                results = helpers.filter(sort_choice, value)
                 # print the dictionary neatly
                 print(json.dumps(results, indent=4))
 
