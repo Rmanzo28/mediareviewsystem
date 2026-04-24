@@ -5,45 +5,32 @@ from pathlib import Path
 global path_to_file
 path_to_file:str = "Data.json"
 
-log.basicConfig(level=log.INFO)
+log.basicConfig(level=log.WARNING)
 
 def write_to_file(data):
     global path_to_file
-    fileexists:bool = Path(path_to_file).exists()
+    fileexists = Path(path_to_file).exists()
 
     if not data:
         raise ValueError("Empty or invalid data")
+
+    try:
+        with open(path_to_file, "a") as f:
+            f.write(json.dumps(data) + "\n")  # FIXED
+        log.info("Data Written To File")
+        return True
+
+    except OSError:
+        log.error("Failure To Write File")
+        return False
     
-
-    if fileexists:
-        try:
-            with open(path_to_file, "a") as f:
-                f.write(json.dumps(data + "\n"))
-            log.info("Data Written To File")
-
-        except OSError:
-            log.error("Failure To Write File")
-            return False
-
-    else:
-        log.warning("File not found")
-        log.info("Creating File Data.txt")
-
-        try:
-            with open(path_to_file, "w") as f:
-                f.write(json.dumps(data + "\n"))
-
-        except OSError:
-            log.error("Failure To Create/Write File")
-            return False
-
-    return True
-
 def read_file():
     global path_to_file
     try:
         with open(path_to_file, "r") as f:
             lines = f.readlines()
+        
+        log.info("File Read Successful")
 
 
         entries = [json.loads(line) for line in lines]
@@ -107,15 +94,31 @@ def user_prompt(prompt):
         return None
     
 
-def filter(datatype,datavalue):
-    data_type_dict = {"rating":1,"type":2,"status":3}
-    x = data_type_dict[datatype]
+def filter(datatype, datavalue):
+    data_type_dict = {
+        "rating": 1,
+        "type": 2,
+        "status": 3
+    }
+
+    x = data_type_dict.get(datatype)
     lines = read_file()
+
     match x:
-        case 1:
+            case 1:
+           
+                entries = [r for r in lines if r["Rating"] == int(datavalue)]
+                return entries
 
-        case 2:
-            entries = [r for r in lines if r["type"] == datavalue]
-            return entries
-        case 3:
+            case 2:
+            
+                entries = [r for r in lines if r["Type"] == datavalue]
+                return entries
 
+            case 3:
+            
+                entries = [r for r in lines if r["Status"] == datavalue]
+                return entries
+
+            case _:
+                return []
