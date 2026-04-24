@@ -1,6 +1,6 @@
 # Media Review System
 This is a simple media review cli build in python, designed to be simple and fast
-### How To Run 
+## How To Run 
 - git clone the repository 
 ```bash
 git clone --depth 1 https://github.com/Rmanzo28/mediareviewsystem.git && cd  /mediareviewsystem
@@ -9,14 +9,21 @@ git clone --depth 1 https://github.com/Rmanzo28/mediareviewsystem.git && cd  /me
 ```bash
 python3 main.py
 ```
+- respond to the prompts
+```bash
+python3 main.py
+========================================
+ Welcome to the Media Review System 
+Rate, review, and explore your favorite media!
+========================================
+What Would You Like To Do? (Enter/View/Sort/Quit):
+```
 
-### Features
+## Features
 - Data Persistence(Via File)
 - Filtering(Based Off Type/Rating/Status)
 - Conditional Logging
 - User Input With Null Checks
-
-
 
 
 
