@@ -31,7 +31,7 @@ def main():
                 # handles viewing all entries
                 lines = helpers.read_file()
                 if lines:
-                    print(json.dumps(lines indent=4))
+                    print(json.dumps(lines, indent=4))
                 if not lines:
                     log.error("File Not Found/Created")
 
