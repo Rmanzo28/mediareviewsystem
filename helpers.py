@@ -1,10 +1,12 @@
 # the file with the main functions
+
+# module imports
 import json
 import logging
 from pathlib import Path
-
+# path to file  declaration
 global path_to_file
-path_to_file = "Data.txt"
+path_to_file = "Data.json"
 # we should only need logging if there is an issue on user side
 
 logging.basicConfig(level=logging.WARNING)
