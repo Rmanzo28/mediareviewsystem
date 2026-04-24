@@ -23,7 +23,7 @@ def write_to_file(data):
         try:
             # append to existing file
             with open(path_to_file, "a") as f:
-                f.write(json.dumps(data + "\n"))
+                f.write(json.dumps(data) + "\n")
 
         except OSError:
             print("Failure to write file")
