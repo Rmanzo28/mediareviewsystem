@@ -75,11 +75,11 @@ def collect_entries():
     mediareview = dict_create()
     try:
         print("* indicates a required question")
-        entry_1 = input("Enter The Title Of The Media*:").lower().strip()
+        entry_1 = input("Enter The Title Of The Media *:").lower().strip()
         entry_2 = input("Enter The Type Of Media(Book/Video game/Anime/Manga/Movie/TV Show)*:").lower().strip()
         entry_3 = input("Enter Any Notes You Had On the Media:").lower()
-        entry_4 = int(input("Enter Your Rating Of The Media*:"))
-        entry_5 = input("Enter How Done You Are With The Media(In Progress,Completed,Not Started)*:").lower().strip()
+        entry_4 = int(input("Enter Your Rating Of The Media(1-10)*:"))
+        entry_5 = input("What Is Your Status Of Completion Of The Media? (In Progress,Completed,Not Started)*:").lower().strip()
 
         if entry_1 and entry_2 and entry_4 and entry_5:
             #checks that all required fields are filled out
