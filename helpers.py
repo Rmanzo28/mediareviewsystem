@@ -32,7 +32,7 @@ def write_to_file(data):
     else:
         #logging that file isnt found and that it is being created
         logging.warning("File not found")
-        logging.info("Creating File Data.txt")
+        logging.info("Creating File Data.json")
 
         try:
             # create and write file
