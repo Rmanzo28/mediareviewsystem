@@ -35,7 +35,7 @@ def main():
                 if not lines:
                     log.error("File Not Found/Created")
 
-            case "sort":
+            case "filter":
                 #sort by userinput
                 sort_choice = input("Filter by (type/rating/status): ").lower().strip()
                 value = input("Enter value to filter by: ")
